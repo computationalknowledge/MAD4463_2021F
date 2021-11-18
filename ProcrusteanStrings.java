@@ -1,17 +1,12 @@
 import java.util.*;
 
-/*
-
-Now iterate over your ArrayList and force each string to be 20 characters in Length
-
-Output the result.
-
- */
+/* Output the result.  */
 
 public class Peanut {
 
     public static void main(String[] args) {
         (new WorkerClass()).Run();
+        (new ProcrutseanAlgorithm()).ImplementPrutseanAlgorithm();
     }
 
 }
@@ -19,9 +14,11 @@ public class Peanut {
 class WorkerClass {
     public static ArrayList Data;
     public void Run() {
+        // #todo come up a way to randomly generate strings of random lengths
+        
         String dataString = "peanut"; 
         Data = new ArrayList();
-        // Make an ArrayList of 20 randomly generated strings, of random random length
+        
         for (int i = 1; i <= 20; i++) {
             Data.add(dataString);
         }
@@ -32,8 +29,11 @@ class WorkerClass {
 
 class ProcrutseanAlgorithm {
 
-    public void Run() {
-
+    // Now iterate over your ArrayList and force each string to be 20 characters in Length
+    static ArrayList DataToProcess =WorkerClass.Data;
+    
+    public void ImplementPrutseanAlgorithm() {
+        // #todo implement the ImplementPrutseanAlgorithm() method
     }
 
 }
