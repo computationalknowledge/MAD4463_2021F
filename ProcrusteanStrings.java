@@ -15,12 +15,12 @@ class WorkerClass {
     public static ArrayList Data;
     public void Run() {
         // #todo come up a way to randomly generate strings of random lengths
-        
-        String dataString = "peanut"; 
+        GenerateRandomStrings g = new GenerateRandomStrings();
+
         Data = new ArrayList();
         
         for (int i = 1; i <= 20; i++) {
-            Data.add(dataString);
+            Data.add(g.MakeAString());
         }
 
     }
@@ -36,4 +36,13 @@ class ProcrutseanAlgorithm {
         // #todo implement the ImplementPrutseanAlgorithm() method
     }
 
+}
+
+class GenerateRandomStrings{
+    java.util.Random rand;
+    public String MakeAString(){
+        rand = new Random();
+        
+        return "tempvalue";
+    }
 }
