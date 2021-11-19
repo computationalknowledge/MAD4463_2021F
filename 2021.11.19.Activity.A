@@ -1,9 +1,9 @@
 /*
-    Activity 1: generate 20 random words.
+    Activity 1: generate 20 random words: of length 5 
     Activity 2: Store these words in an Array List.
  */
-
 package simplewarmupnov19.pkg2021;
+
 import java.util.*;
 
 public class MainApplication {
@@ -17,20 +17,23 @@ public class MainApplication {
     
 }
 
-class Words{
+class Words {
+
     // how to generate random words
-    static String[] alphabet = {"a", "b", "c", "d", "e", "f", "g", "h", "g", "h" };
+    static String[] alphabet = {"a", "b", "c", "d", "e", "f", "g", "h", "g", "h"};
     static int randValue;
-    static String tempString;
-    public static void Run(){
+    static String tempString = "";
+
+    public static void Run() {
         // take a random letter out of this string:
         // name a random number generator
         // randomly select an entry from the alphabet array
         Random rand = new Random();
         
-        randValue = rand.nextInt(alphabet.length);
-        tempString = alphabet[randValue];
-        System.out.println(tempString);
+        for (int i = 0; i < 5; i++) {
+            randValue = rand.nextInt(alphabet.length);
+            tempString += alphabet[randValue];
+            System.out.println(tempString);            
+        }   
     }
-    
 }
