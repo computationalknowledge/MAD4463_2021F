@@ -13,6 +13,7 @@ public class MainApplication {
      */
     public static void main(String[] args) {
         Words.Run();
+        GenerateReport.OutputReport();
     }
     
 }
@@ -22,11 +23,16 @@ class Words {
     // how to generate random words
     static String[] alphabet = {"a", "b", "c", "d", "e", "f", "g", "h", "g", "h"};
     static int randValue;
-    static String generatedWord = "";
+    static String generatedWord;
+    static ArrayList List0fWords;
     
     static public void Run(){
+        
+        List0fWords = new ArrayList();
+        
         for (int i = 0; i < 20; i++) {
-          System.out.println(GenerateWords());  
+          generatedWord = "";  
+          List0fWords.add(GenerateWords());  
         }
     }
 
@@ -41,5 +47,17 @@ class Words {
             generatedWord += alphabet[randValue];           
         }   
         return generatedWord;
+    }
+}
+
+class GenerateReport{
+    
+    // make a local copy of list of words
+    private static ArrayList wordList_localCopy = Words.List0fWords;
+    
+    public static void OutputReport(){
+        for (int i = 0; i < 10; i++) {
+           System.out.println(wordList_localCopy.get(i));
+        }
     }
 }
