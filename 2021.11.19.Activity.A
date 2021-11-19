@@ -22,9 +22,15 @@ class Words {
     // how to generate random words
     static String[] alphabet = {"a", "b", "c", "d", "e", "f", "g", "h", "g", "h"};
     static int randValue;
-    static String tempString = "";
+    static String generatedWord = "";
+    
+    static public void Run(){
+        for (int i = 0; i < 20; i++) {
+          System.out.println(GenerateWords());  
+        }
+    }
 
-    public static void Run() {
+    private static String GenerateWords() {
         // take a random letter out of this string:
         // name a random number generator
         // randomly select an entry from the alphabet array
@@ -32,8 +38,8 @@ class Words {
         
         for (int i = 0; i < 5; i++) {
             randValue = rand.nextInt(alphabet.length);
-            tempString += alphabet[randValue];
-            System.out.println(tempString);            
+            generatedWord += alphabet[randValue];           
         }   
+        return generatedWord;
     }
 }
