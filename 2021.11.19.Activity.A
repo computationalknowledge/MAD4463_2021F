@@ -1,0 +1,25 @@
+/*
+    Activity 1: generate 20 random words.
+    Activity 2: Store these words in an Array List.
+ */
+
+package simplewarmupnov19.pkg2021;
+
+public class MainApplication {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
+    
+}
+
+class Words{
+    // how to generate random words
+    String[] alphabet = {"a", "b", "c", "d", "e", "f", "g", "h", "g", "h" };
+    
+    // #todo: write a method to take a random letter out of this string:
+    
+}
