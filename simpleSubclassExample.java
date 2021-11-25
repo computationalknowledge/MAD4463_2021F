@@ -1,22 +1,43 @@
+// chaining super calls
+
 public class MainApplication {
 
 	public static void main(String[] args) {
-		Student s1 = new Student("Joe");
-		System.out.println(s1.SayHello());
+		Student s1 = new Student("Joe", "Supervisor Mary");
+		s1.SayHello();
 	}
 }
 
-class Person {
-	public Person() {}
-	public Person(String someName) {}
-	String personName;
+class Superman{
+	String supervisor = "Mr. Jameson";
+}
 
-	public String SayHello() {
-		return this.personName;
+class Person extends Superman {
+	public Person() {
+	}
+
+	public Person(String someName) {
+	}
+
+	String personName;
+	String supervisorName  = "Supervisor Barney";
+
+	public void SayHello() {
+		System.out.println(personName);
+		System.out.println(supervisorName);
 	}
 }
 
 class Student extends Person {
-	public Student() {}
-	public Student(String someName) {this.personName = someName;}	
+	String supervisorName = "supervisor Jill";
+	public Student() {
+	}
+
+	public Student(String someName, String supervisorName) {
+		this.personName = someName;
+	}
+
+	public void SayHello() {
+		System.out.println(super.supervisorName);
+	}
 }
