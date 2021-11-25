@@ -2,21 +2,13 @@ public class MainApplication {
 
 	public static void main(String[] args) {
 		Student s1 = new Student("Joe");
-		Professor p1 = new Professor("Brown Bear");
 		System.out.println(s1.SayHello());
 	}
 }
 
 class Person {
-
-	public Person() {
-
-	}
-
-	public Person(String input) {
-		this.personName = input;
-	}
-
+	public Person() {}
+	public Person(String someName) {}
 	String personName;
 
 	public String SayHello() {
@@ -25,17 +17,6 @@ class Person {
 }
 
 class Student extends Person {
-	public Student(String stuName) {
-	}
-}
-
-class Professor extends Person {
-	public Professor(String profName) {
-	}
-}
-
-class Enrollment {
-}
-
-class Class {
+	public Student() {}
+	public Student(String someName) {this.personName = someName;}	
 }
